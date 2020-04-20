@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './Components/Header'
+import IceCream from './Pages/IceCream'
+import Home from './Pages/Home'
+import Cakes from './Pages/Cakes'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/iceCream">
+            <IceCream />
+          </Route>
+          <Route path="/cakes">
+            <Cakes />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
