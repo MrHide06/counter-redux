@@ -3,8 +3,10 @@ import Header from './Components/Header'
 import IceCream from './Pages/IceCream'
 import Home from './Pages/Home'
 import Cakes from './Pages/Cakes'
+import Api from './Pages/Api'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
+import Mock from './Pages/MockApi'
 
 function App() {
   return (
@@ -20,6 +22,12 @@ function App() {
           </Route>
           <Route path="/cakes">
             <Cakes />
+          </Route>
+          <Route path="/api">
+            <Api />
+          </Route>
+          <Route path="/mock">
+            <Mock />
           </Route>
         </Switch>
       </Router>

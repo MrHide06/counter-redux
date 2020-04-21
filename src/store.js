@@ -1,9 +1,6 @@
-import { createStore, combineReducers } from 'redux'
-import Cakes from './Reducers/CakesReducer'
-import IceCream from './Reducers/IceCreamReducer'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import logger from "redux-logger";
+import MainReducer from './Reducers/CombineReducer'
 
-const MainReducer = combineReducers({
-    Cakes,
-    IceCream
-})
-export default createStore(MainReducer)
+export default createStore(MainReducer, applyMiddleware(thunk, logger))

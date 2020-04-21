@@ -23,6 +23,16 @@ const Header = (props) => {
                                 props.history.push('/cakes')
                             }}
                         >Cakes</Nav.Link>
+                        <Nav.Link 
+                            onClick={() => {
+                                props.history.push('/api')
+                            }}
+                        >Json Placeholder</Nav.Link>
+                        <Nav.Link 
+                            onClick={() => {
+                                props.history.push('/mock')
+                            }}
+                        >MockAPI</Nav.Link>
                     </Nav>
                     <Nav>
                         <Nav.Link href="#deets">Jumlah Ice Cream: {props.iceCream}</Nav.Link>
