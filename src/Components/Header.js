@@ -36,8 +36,8 @@ const Header = (props) => {
                             >Cart</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="Context" id="collasible-nav-dropdown">
-                            <NavDropdown.Itemn>Function Based</NavDropdown.Itemn>
-                            <NavDropdown.Itemn>Class Based</NavDropdown.Itemn>
+                            <NavDropdown.Itemn href="#">Function Based</NavDropdown.Itemn>
+                            <NavDropdown.Itemn href="#">Class Based</NavDropdown.Itemn>
                         </NavDropdown>
                     </Nav>
                     <Nav>
