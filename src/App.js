@@ -7,6 +7,7 @@ import Api from './Pages/Api'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import Mock from './Pages/MockApi'
+import Cart from './Pages/Hook'
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/mock">
             <Mock />
+          </Route>
+          <Route path="/cart">
+            <Cart />
           </Route>
         </Switch>
       </Router>

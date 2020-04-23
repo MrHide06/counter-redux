@@ -33,6 +33,11 @@ const Header = (props) => {
                                 props.history.push('/mock')
                             }}
                         >MockAPI</Nav.Link>
+                        <Nav.Link 
+                            onClick={() => {
+                                props.history.push('/cart')
+                            }}
+                        >Cart</Nav.Link>
                     </Nav>
                     <Nav>
                         <Nav.Link href="#deets">Jumlah Ice Cream: {props.iceCream}</Nav.Link>
