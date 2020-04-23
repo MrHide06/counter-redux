@@ -35,9 +35,15 @@ const Header = (props) => {
                             }}
                             >Cart</NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title="Context" id="collasible-nav-dropdown">
-                            <NavDropdown.Itemn href="#">Function Based</NavDropdown.Itemn>
-                            <NavDropdown.Itemn href="#">Class Based</NavDropdown.Itemn>
+                        <NavDropdown title="Context" id="basic-nav-dropdown">
+                            <NavDropdown.Item onClick={() => {
+                                props.history.push('/moviefunction')
+                            }}
+                            >Movie Function</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => {
+                                props.history.push('/movieclass')
+                            }}
+                            >Movie Class</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Nav>

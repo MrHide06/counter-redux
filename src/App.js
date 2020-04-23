@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 import Mock from './Pages/MockApi'
 import Cart from './Pages/Hook'
+import CatalogMovie from './Context/CatalogContext'
+import MovieFunction from './Pages/MovieFunction'
+import MovieClass from './Pages/MovieClass'
 
 function App() {
   return (
@@ -33,6 +36,14 @@ function App() {
           <Route path="/cart">
             <Cart />
           </Route>
+          <CatalogMovie>
+            <Route path="/moviefunction">
+              <MovieFunction />
+            </Route>
+            <Route path="/movieclass">
+              <MovieClass />
+            </Route>
+          </CatalogMovie>
         </Switch>
       </Router>
     </div>
