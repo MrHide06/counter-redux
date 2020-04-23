@@ -13,31 +13,32 @@ const Header = (props) => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link 
-                            onClick={() => {
-                                props.history.push('/iceCream')
-                            }}
-                        >Ice Cream</Nav.Link>
-                        <Nav.Link 
-                            onClick={() => {
+                        <NavDropdown title="Redux" id="collasible-nav-dropdown">
+                            <NavDropdown.Item onClick={() => {
+                                    props.history.push('/iceCream')
+                                }}
+                            >Ice Cream</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => {
                                 props.history.push('/cakes')
                             }}
-                        >Cakes</Nav.Link>
-                        <Nav.Link 
-                            onClick={() => {
+                            >Cakes</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => {
                                 props.history.push('/api')
                             }}
-                        >Json Placeholder</Nav.Link>
-                        <Nav.Link 
-                            onClick={() => {
+                            >Json Placeholder</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => {
                                 props.history.push('/mock')
                             }}
-                        >MockAPI</Nav.Link>
-                        <Nav.Link 
-                            onClick={() => {
+                            >MockAPI</NavDropdown.Item>
+                            <NavDropdown.Item onClick={() => {
                                 props.history.push('/cart')
                             }}
-                        >Cart</Nav.Link>
+                            >Cart</NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Context" id="collasible-nav-dropdown">
+                            <NavDropdown.Itemn>Function Based</NavDropdown.Itemn>
+                            <NavDropdown.Itemn>Class Based</NavDropdown.Itemn>
+                        </NavDropdown>
                     </Nav>
                     <Nav>
                         <Nav.Link href="#deets">Jumlah Ice Cream: {props.iceCream}</Nav.Link>
